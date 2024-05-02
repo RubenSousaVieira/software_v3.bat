@@ -17,14 +17,16 @@ pause
 
 echo .
 echo .
-echo **A RENOMEAR O USER ADMINISTRADOR E A RESPETIVA SENHA**
+
+
+echo Insira a senha para o "adldmin" (nao sera possivel observar os caracteres inseridos abaixo)
 
 set "username=administrador"
 set "newusername=adldmin"
 set "newpassword=ADL!5jmm"
 
 net user %username% /active:no
-net user %newusername% %newpassword% /add /active:yes
+net user %newusername% * /add /active:yes
 net localgroup Administrators %newusername% /add
 
 echo **RENOMEACAO REALIZADA PORFAVOR VERIFICAR AS INFORMACOES ACIMA**
